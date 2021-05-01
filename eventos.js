@@ -36,53 +36,7 @@
 // 2- contador
 // Crear un documento html que muestre un número (empezando en 0) y 6 botones con los siguientes valores: -1, +1, -5, +5, -10, +10. Cuando se clickea un botón, se tiene que sumar o restar la cantidad correspondiente, y actualizar el número mostrado.
 
-// ---------------------- BOTON EJERCICIOS CLASE- MATIAS
-// <button id="boton">
-//       Soy un boton
-//     </button>
-//     <script>
-//       const boton = document.getElementById('boton');
-//    //   const saludar = () => {console.log("hola") }
-//       boton.addEventListener("click",()=>{
-//         console.log("hola,funcion anonima");
-//       })
-//     </script>
 
-
-// <button id="boton">
-//       Soy un boton
-//     </button>
-//     <script>
-//       const boton = document.getElementById('boton');
-//       const saludar = () => {console.log("hola") }
-//       console.log(saludar);
-//       boton.addEventListener("click",saludar)
-//     </script>
-
-// ---------------------------- PRUEBAS GRUPALES
-
-// const contador = document.getElementById('contador');
-// const cifraInicial = parseInt(contador);
-// const botonMenos1=document.getElementById('boton-1');
-// //const resultadoMenosUno=cifraInicial-1;
-// const botonMas1=document.getElementById('boton+1');
-
-
-// const calculo = (event) => {
-    
-    //     if(event === click.botonMenos1) {
-        //         cifraInicial=(cifraInicial-1);
-        //     } else if(event === click.botonMas1) {
-            //         cifraInicial=(cifraInicial+1);
-            //     }
-            
-            // };
-            
-            //     botonMenos1.addEventListener('click',calculo)
-            //     botonMas1.addEventListener('click',calculo)
-            
-            
-//----------------------------------------------------------
 //     //VERSION OK BELU        
             
 //     const elementoContador = document.getElementById('contador')
@@ -123,87 +77,36 @@
 
 // -------------------PRUEBAS PARA UN SOLO ADDEVENTLISTENER
 
-// const elementoContador = document.getElementById('contador')
-// let contador = parseInt(elementoContador.innerHTML)    
-//     const botonMenos1 = document.getElementById('boton-1')
-//     const botonMas1 = document.getElementById('boton+1')
-//     const botonMenos5 = document.getElementById('boton-5')
-//     const botonMas5 = document.getElementById('boton+5') 
-//     const botonMenos10 = document.getElementById('boton-10')
-//     const botonMas10 = document.getElementById('boton+10')
-//     const botones = document.getElementsByTagName('button');
-//     const abrirPublicacion = () => {
 
-//         console.log('Esto abre la publicación');
+// const buttons = document.getElementsByClassName('btn-counter');
+// const elementRespuesta = document.getElementById('resultado');
+// let inputRespuesta = parseInt(elementRespuesta.innerHTML);
+
+// const calculo = (event) => {
+
+//     const button = event.target
+//     const qty = button.getAttribute('data-qty');
+//     const op = button.getAttribute('data-op');
     
-//     }
-//     for(let i = 0; i < botones.length; i++) {
-//     botones[i].addEventListener('click', abrirPublicacion);
-// }
+//         if(op === '+') {
 
+//             inputRespuesta = inputRespuesta + parseInt(qty);
+//             elementRespuesta.innerHTML = inputRespuesta
 
+//         } else if (op === '-') {
 
-// const elementoContador = document.getElementById('contador')
-// let contador = parseInt(elementoContador.innerHTML)    
-//     const botonMenos1 = document.getElementById('boton-1')
-//     const botonMas1 = document.getElementById('boton+1')
-//     const botonMenos5 = document.getElementById('boton-5')
-//     const botonMas5 = document.getElementById('boton+5') 
-//     const botonMenos10 = document.getElementById('boton-10')
-//     const botonMas10 = document.getElementById('boton+10')
-//     const botones = document.getElementsByTagName('button');
-//     const calculo = (event) => {
+//             inputRespuesta = inputRespuesta - parseInt(qty);
+//             elementRespuesta.innerHTML = inputRespuesta
 
-//              if (event.target.botonMenos1) {
-//                 contador = contador - 1;
-//                 elementoContador.innerHTML = contador;
-//             } else if (event.target.botonMas1) {
-//                 contador = contador + 1 ;
-//                 elementoContador.innerHTML = contador;
-//             } else if (event.target.botonMenos5) {
-//                 contador = contador - 5;
-//                 elementoContador.innerHTML = contador;
-//             } else if (event.target.botonMas5) {
-//                 contador = contador + 5;
-//                 elementoContador.innerHTML = contador;
-//             } else if (event.target.botonMenos10) {
-//                 contador = contador - 10;
-//                 elementoContador.innerHTML = contador;
-//             } else if (event.target.botonMas10) {
-//                 contador = contador + 10;
-//                 elementoContador.innerHTML = contador;
-//             }
+//         } 
+
 // };
 
-//     for(let i = 0; i < botones.length; i++) {
-//     botones[i].addEventListener('click', calculo);
-// }
+// for(let i = 0; i < buttons.length; i++) {
 
-// boton.addEventListener('click', () => {
+//     buttons[i].addEventListener('click', calculo)
 
-//     if (botones[0]){
-//         contador = contador - 1;
-//         elementoContador.innerHTML = contador;
-//     } else if (botones[1]){
-//         contador = contador + 1 ;
-//         elementoContador.innerHTML = contador;
-//     } else if (botones[2]){
-//         contador = contador - 5;
-//         elementoContador.innerHTML = contador;
-//     } else if (botones[3]){
-//         contador = contador + 5;
-//         elementoContador.innerHTML = contador;
-//     } else if (botones[4]){
-//         contador = contador - 10;
-//         elementoContador.innerHTML = contador;
-//     } else if (botones[4]){
-//         contador = contador + 10;
-//         elementoContador.innerHTML = contador;
-//     }
-// })
-
-
-
+// };
 
 
 
@@ -338,14 +241,23 @@
 // 501px - 1000px	green
 // 1001px - 1500px	blue
 // 1501px - 2000px	orange
+
+
+
 // imagenes
 // Crear un documento html con al menos 4 imágenes chicas (100px de alto) y una imagen grande (500px de alto). Cuando se clickean las imágenes chicas, la imagen grande se tiene que actualizar con la misma que la imagen chica clickeada.
+
+
 
 // imagenes-2
 // Repetir el ejercicio anterior, pero en vez de cambiar la imagen grande cuando se clickean las imágenes chicas, hacerlo cuando se pasa el mouse por encima de las imágenes chicas.
 
+
+
 // peliculas
 // Crear un documento html con 12 imágenes de posters de películas. Buscar imágenes de películas de 3 géneros (acción, aventura, ciencia ficción, comedia, etc), 4 películas por género. Agregar al documento un botón por cada género, y un botón que diga Todas. Cuando se clickea el botón de un género, se tienen que mostrar sólo las películas correspondientes a ese género. Cuando se clickea el botón Todas se tienen que mostrar todas las películas.
+
+
 
 // pin
 // En un documento html crear botones con números del 0 al 9, un botón para reiniciar, un botón para borrar, y un elemento de texto.
@@ -353,11 +265,21 @@
 // El máximo de dígitos que se pueden ingresar es 6, cuando ya hay 6 dígitos ingresados y se clickea un nuevo número, no debe pasar nada.
 // El botón de reiniciar debe borrar todos los dígitos del elemento de texto.
 // El botón de borrar debe borrar el último dígito del elemento de texto. Por ejemplo, si el pin ingresado es 2544 y se presiona la tecla borrar, debe quedar en 254.
+
+
+
+
 // favoritos
 // Crear dos contenedores, uno para imágenes y otro para favoritos. En el contenedor de imágenes, agregar al menos 10 imágenes (cualesquiera). Al clickear una imagen en el contenedor de imágenes, se debe agregar la misma imagen en el contenedor de favoritos. Al clickear una imagen en el contenedor de favoritos, se debe eliminar la imagen seleccionada de dicho contenedor.
 
+
+
+
 // color-aleatorio
 // Hacer un programa que al apretar la tecla espacio, cambie el color de fondo del body por un color aleatorio. Para eso, crear una función obtenerColorAleatorio() que devuelva un string con el formato de ejemplo rgb(0,0,0) donde los valores de r, g y b se generan aleatoriamente (con números del 1 al 255).
+
+
+
 
 // adivinar-numero
 // Crear un programa que genere un número aleatorio entre 0 y 9. Cuando se presiona un número en el teclado, el programa debe mostrar en el documento html un mensaje:
@@ -453,75 +375,93 @@
 // Todos los inputs comiencen con el valor 255.
 // Cuando se modifica algún input, se cambie el color de fondo del body con el color que se forma a partir de dichos valores.
 
+// VERSION CON FUNCION
 
-const redInput = document.getElementById('red');
-let red = redInput.value;
-const greenInput = document.getElementById('green');
-let green = greenInput.value;
-const blueInput = document.getElementById('blue');
-let blue = blueInput.value;
-const fondo = document.querySelector('body');
-let colorRgb=`rgb(${red}, ${green}, ${blue})`;
-fondo.style.backgroundColor=colorRgb;
+// const redInput = document.getElementById('red');
+// let red = redInput.value;
+// const greenInput = document.getElementById('green');
+// let green = greenInput.value;
+// const blueInput = document.getElementById('blue');
+// let blue = blueInput.value;
+// const fondo = document.querySelector('body');
+// let colorRgb=`rgb(${red}, ${green}, ${blue})`;
+// fondo.style.backgroundColor=colorRgb;
 
+// const cambioColor = (r, g, b) => {
 
-redInput.addEventListener('keyup', () => {
-    red=redInput.value;
-    green=greenInput.value;
-    blue=blueInput.value;
-});
+//     fondo.style.backgroundColor=`rgb(${r}, ${g}, ${b})`;
+// }
 
-greenInput.addEventListener('keyup', () => {
-    red=redInput.value;
-    green=greenInput.value;
-    blue=blueInput.value;
-});
-
-blueInput.addEventListener('keyup', () => {
-    red=redInput.value;
-    green=greenInput.value;
-    blue=blueInput.value;
-});
-
-// redInput.addEventListener('keyup', () => {
-//     redInput=red.innerHTML;
-//     greenInput=green.innerHTML;
-//     blueInput=blue.innerHTML;
+// redInput.addEventListener('input', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//     cambioColor(red, green, blue);//     
 // });
 
-//     const elementoContador = document.getElementById('contador')
-//     let contador = parseInt(elementoContador.innerHTML)    // DUDA
-//     const botonMenos1 = document.getElementById('boton-1')
-//     const botonMas1 = document.getElementById('boton+1')
-//     const botonMenos5 = document.getElementById('boton-5')
-//     const botonMas5 = document.getElementById('boton+5') 
-//     const botonMenos10 = document.getElementById('boton-10')
-//     const botonMas10 = document.getElementById('boton+10')
+// greenInput.addEventListener('input', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//    cambioColor(red, green, blue);
+// });
 
-//     botonMenos1.addEventListener('click', () => {
-//       contador = contador - 1;
-//       elementoContador.innerHTML = contador;
-//     })
-//     botonMas1. addEventListener('click', () => {
-//         contador = contador + 1;
-//         elementoContador.innerHTML = contador;
-//     })
-//    botonMenos5. addEventListener('click', () => {
-//         contador = contador - 5;
-//         elementoContador.innerHTML = contador;
-//     })
-//     botonMas5. addEventListener('click', () => {
-//         contador = contador + 5;
-//         elementoContador.innerHTML = contador;
-//     })
-//     botonMenos10. addEventListener('click', () => {
-//         contador = contador - 10;
-//         elementoContador.innerHTML = contador;
-//     })
-//     botonMas10. addEventListener('click', () => {
-//         contador = contador + 10;
-//         elementoContador.innerHTML = contador;
-//     })
+// blueInput.addEventListener('input', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//     cambioColor(red, green, blue);
+// });
+
+// VERSION SIN FUNCION
+
+
+// const redInput = document.getElementById('red');
+// let red = redInput.value;
+// const greenInput = document.getElementById('green');
+// let green = greenInput.value;
+// const blueInput = document.getElementById('blue');
+// let blue = blueInput.value;
+// const fondo = document.querySelector('body');
+// let colorRgb=`rgb(${red}, ${green}, ${blue})`;
+// fondo.style.backgroundColor=colorRgb;
+
+
+// redInput.addEventListener('keyup', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//     let colorRgb=`rgb(${red}, ${green}, ${blue})`;
+//     fondo.style.backgroundColor=colorRgb;
+// });
+
+// greenInput.addEventListener('keyup', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//     let colorRgb=`rgb(${red}, ${green}, ${blue})`;
+//     fondo.style.backgroundColor=colorRgb;
+    
+// });
+
+// blueInput.addEventListener('keyup', () => {
+//     red=redInput.value;
+//     green=greenInput.value;
+//     blue=blueInput.value;
+//     let colorRgb=`rgb(${red}, ${green}, ${blue})`;
+//     fondo.style.backgroundColor=colorRgb;
+  
+// });
+
+
+
+
+//codigo RESET PAGINA CECI
+// function reloadPage(){
+//     window.location.reload();
+// }
+// reset.onclick= reloadPage; //Para resetear la página con el "onclick"
+
 
 
 // Todo
@@ -529,12 +469,18 @@ blueInput.addEventListener('keyup', () => {
 
 // Tenga un input, un botón que diga Crear todo y una lista.
 // Al presionar el botón, si el input no está vacío, se agregue un ítem a la lista con el contenido del input y se borre el contenido del input.
+
+
+
 // Agregar imágenes
 // Crear una página que:
 
 // Tenga un input para la url de la imagen, un botón que diga Agregar imagen y un contenedor flexible donde mostrar imágenes como en una grilla.
 // Al presionar el botón, si el input no está vacío, se agregue una imagen al contenedor cuyo src es el contenido del input y se borre el contenido del input.
 // Al hacer click en una imagen, esta se elimine.
+
+
+
 // Comentario
 // Crear una página que:
 
@@ -546,6 +492,9 @@ blueInput.addEventListener('keyup', () => {
 // normal si está vacío
 // verde si tiene texto y 240 caracteres o menos
 // rojo si tiene más de 240 caracters
+
+
+
 // Conversor avanzado
 // Crear una página que:
 
@@ -564,6 +513,10 @@ blueInput.addEventListener('keyup', () => {
 // Ambos select comiencen con la opción metros seleccionada y el input comience con el valor 1.
 // Al seleccionar una nueva opción en cualquiera de los select o al modificar el valor del input, se actualice el texto con el resultado de la conversión del valor ingresado de una unidad a la otra.
 // Al clickear el botón Intercambiar se intercambien las opciones de los selects y se actualice el texto.
+
+
+
+
 // TIP
 
 // Para realizar este ejercicio, el value de cada option del select deben ser los siguiente:
@@ -575,6 +528,9 @@ blueInput.addEventListener('keyup', () => {
 // Para Milímetros, el value debe ser 0.001
 // La conversión se realiza con la fórmula: VALOR_INGRESADO * VALOR_UNIDAD / VALOR_UNIDAD_A_CONVERTIR.
 
+
+
+
 // Card dinámica
 // Crear una página que:
 
@@ -583,6 +539,9 @@ blueInput.addEventListener('keyup', () => {
 // A medida que se modifiquen los campos, se modifique respectivamente los distintos elementos de la card.
 // Si el checkbox no está seleccionado, el link Ver más no se muestre y el input de la url externa se deshabilite.
 // Si el checkbox está seleccionado, el link Ver más se muestre y el input de la url externa se habilite.
+
+
+
 // Selector de imágenes
 // Crear una página que:
 
@@ -603,6 +562,9 @@ blueInput.addEventListener('keyup', () => {
 
 // Por ejemplo, si una imagen tiene un alt que dice Oso koala comiendo eucaliptus y se busca ko dicha imagen debe mostrarse.
 
+
+
+
 // Filtro de imágenes
 // Crear una página que:
 
@@ -610,6 +572,8 @@ blueInput.addEventListener('keyup', () => {
 // Al seleccionar un checkbox se actualice la grilla, mostrando aquellas imágenes que pertenezcan a las categorías seleecionadas.
 // Al deseleccionar todos los checkbox se muestren todas las imágenes
 // TIP: Agregar a cada imagen un atributo data-categoria cuyo valor se corresponda con el atributo value del checkbox de la categoría correspondiente.
+
+
 
 // Feedback (Validación)
 // Debemos crear una encuesta de satisfacción al cliente para un portal de ventas basado en 4 preguntas que nos determinará qué tan contento está el cliente con nuestro servicio. Las respuestas deben ser radio buttons y cada grupo responderá a una pregunta específica.
@@ -646,6 +610,10 @@ blueInput.addEventListener('keyup', () => {
 // 6-8: Conforme
 // 8-10: Satisfecho
 // 11-12: Muy satisfecho
+
+
+
+
 // Tarjeta de crédito (Validación)
 // Realizaremos una validación sobre el formulario del ejercicio Pago.
 
@@ -666,6 +634,9 @@ blueInput.addEventListener('keyup', () => {
 // En el Paso 1: Usaremos blur y change
 
 // Mientras que las validaciones del Paso 2 y Paso 3 las haremos antes de intentar enviar el formulario.
+
+
+
 
 // Registro (Validación)
 // Antes de enviar el formulario de registro de cliente creado con anterioridad, realizaremos algunas validaciones sobre este. Pero primero, agregaremos una etiqueta small debajo de cada input con un color rojo y de inicio no va a visualizarse.
