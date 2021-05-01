@@ -154,30 +154,22 @@
 // 4- paleta
 // Crear un documento html que tenga 6 botones con un color de fondo distinto, y un div cuadrado grande. Cuando se clickea un botón, el div debe cambiar su color de fondo al mismo color de fondo que el del botón clickeado.
 
+//----------------VERSION ORIGINAL
 
 // const botonRojo = document.getElementById('boton-red')
-// botonRojo.style.backgroundColor='red'
-// botonRojo.style.width='100px'
+// botonRojo.style ='background-color: red; width: 100px'
 // const botonAmarillo = document.getElementById('boton-yellow')
-// botonAmarillo.style.backgroundColor='yellow'
-// botonAmarillo.style.width='100px'
+// botonAmarillo.style ='background-color: yellow; width: 100px'
 // const botonVerde = document.getElementById('boton-green')
-// botonVerde.style.backgroundColor='green'
-// botonVerde.style.width='100px'
+// botonVerde.style ='background-color: green; width: 100px'
 // const botonAzul = document.getElementById('boton-blue')
-// botonAzul.style.backgroundColor='blue'
-// botonAzul.style.width='100px'
+// botonAzul.style ='background-color: blue; width: 100px'
 // const botonRosa = document.getElementById('boton-pink')
-// botonRosa.style.backgroundColor='pink'
-// botonRosa.style.width='100px'
+// botonRosa.style ='background-color: pimk; width: 100px'
 // const botonNaranja = document.getElementById('boton-orange')
-// botonNaranja.style.backgroundColor='orange'
-// botonNaranja.style.width='100px'
+// botonNaranja.style ='background-color: orange; width: 100px'
 // const divColor=document.getElementById('div-color')
-// divColor.style.width='600px'
-// divColor.style.height='600px'
-// divColor.style.border='1px grey solid'
-// divColor.style.marginBottom='20px'
+// divColor.style = "height: 600px; width: 600px; border: 1px grey solid; margin-bottom: 20px";
 
 // botonRojo.addEventListener('click', () =>{
 //     divColor.style.backgroundColor='red'
@@ -198,9 +190,33 @@
 //     divColor.style.backgroundColor='orange'
 // })
 
+//----------------VERSION FOR
 
+// const botonRojo = document.getElementById('boton-red')
+// botonRojo.style ='background-color: red; width: 100px'
+// const botonAmarillo = document.getElementById('boton-yellow')
+// botonAmarillo.style ='background-color: yellow; width: 100px'
+// const botonVerde = document.getElementById('boton-green')
+// botonVerde.style ='background-color: green; width: 100px'
+// const botonAzul = document.getElementById('boton-blue')
+// botonAzul.style ='background-color: blue; width: 100px'
+// const botonRosa = document.getElementById('boton-pink')
+// botonRosa.style ='background-color: pink; width: 100px'
+// const botonNaranja = document.getElementById('boton-orange')
+// botonNaranja.style ='background-color: orange; width: 100px'
+// const divColor=document.getElementById('div-color')
+// divColor.style = "height: 600px; width: 600px; border: 1px grey solid; margin-bottom: 20px";
+// const buttons = document.getElementsByTagName('button')
 
+// const setColor= (event) => {    
+//         const button = event.target;
+//         const fondo = button.getAttribute('data-color');
+//         divColor.style.backgroundColor=fondo;
+//     }
 
+// for(let i = 0; i < buttons.length; i++) {
+//     buttons[i].addEventListener('click', setColor)
+// }
 
 // email (sin leer)
 // Crear un documento html que tenga:
