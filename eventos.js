@@ -269,7 +269,8 @@ const title = document.getElementsByClassName('title-mode')[0];
 const sun = document.getElementsByClassName('fa-sun')[0];
 const moon = document.getElementsByClassName('fa-moon')[0];
 
-const switchMode = (event) => {
+const switchMode = () => {
+
     document.body.classList.toggle('dark');
     const mode = document.body.getAttribute('class');
        
@@ -289,9 +290,8 @@ const switchMode = (event) => {
         sun.style='display: none';
         moon.style='color: white; font-size: 25px;';
     }
-
-}
-
+    
+};
 
 button.addEventListener('click', switchMode);
 
