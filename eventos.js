@@ -254,6 +254,49 @@
 // lo mismo tiene que pasar cuando se apreta la flecha derecha (aumentar progreso) y la flecha izquierda (disminuir progreso)
 // el incremento/decremento es del 10%
 
+
+
+const divPadre = document.getElementById('IdPadre');
+const divHijo = document.getElementById('IdHijo');
+const buttons = document.getElementsByClassName('btn-counter');
+let widthHijo = '0';
+divHijo.style.width= `${widthHijo}%`;
+
+const progreso = (event) => {
+
+    const button = event.target
+    const op = button.getAttribute('data-op');
+
+    if(op === '+'){
+        widthHijo = parseInt(widthHijo)+10;
+        divHijo.style.width= `${widthHijo}%`;
+    } else if (op === '-') {
+        widthHijo = parseInt(widthHijo)-10;
+        divHijo.style.width= `${widthHijo}%`;      
+    }
+}
+
+for(let i = 0; i < buttons.length; i++) {
+
+    buttons[i].addEventListener('click', progreso)
+
+}
+
+const progresoFlechas = (event) => {
+
+    if(event.keyCode == '39'){
+        widthHijo = parseInt(widthHijo)+10;
+        divHijo.style.width= `${widthHijo}%`;
+    } else if (event.keyCode == '37') {
+        widthHijo = parseInt(widthHijo)-10;
+        divHijo.style.width= `${widthHijo}%`;
+    }
+
+}
+
+document.onkeyup = progresoFlechas
+
+
 //-------------------------------------------------
 
 
@@ -264,37 +307,39 @@
 // modo oscuro: body con color de fondo negro, texto e ícono con color blanco, ícono de sol
 // modo claro: body con color de fondo blanco, texto e ícono con color negro, ícono de luna
 
-const button = document.getElementById('switch-button');
-const title = document.getElementsByClassName('title-mode')[0];
-const sun = document.getElementsByClassName('fa-sun')[0];
-const moon = document.getElementsByClassName('fa-moon')[0];
+// const button = document.getElementById('switch-button');
+// const title = document.getElementsByClassName('title-mode')[0];
+// const sun = document.getElementsByClassName('fa-sun')[0];
+// const moon = document.getElementsByClassName('fa-moon')[0];
 
-const switchMode = () => {
+// const switchMode = () => {
 
-    document.body.classList.toggle('dark');
-    const mode = document.body.getAttribute('class');
+//     document.body.classList.toggle('dark');
+//     const mode = document.body.getAttribute('class');
        
-    if(mode == 'dark') {
-        document.body.style.backgroundColor='#000';
-        document.body.style.color='#FFF';     
-        button.style.backgroundColor ='#FFF'; 
-        button.style.filter='drop-shadow(0px 0px 3px ivory)';
-        title.innerHTML='Modo Oscuro';
-        moon.style='display: none';
-        sun.style='color: black; font-size: 30px;';
+//     if(mode == 'dark') {
+//         document.body.style.backgroundColor='#000';
+//         document.body.style.color='#FFF';     
+//         button.style.backgroundColor ='#FFF'; 
+//         button.style.filter='drop-shadow(0px 0px 3px ivory)';
+//         title.innerHTML='Modo Oscuro';
+//         moon.style='display: none';
+//         sun.style='color: black; font-size: 30px;';
 
-    } else { 
-        document.body.style.backgroundColor='#FFF';
-        document.body.style.color='#000';
-        button.style.backgroundColor ='#000'; 
-        button.style.filter='drop-shadow(0px 0px 3px GREY)';
-        title.innerHTML='Modo Claro';
-        sun.style='display: none';
-        moon.style='color: white; font-size: 25px;';
-    }
+//     } else { 
+//         document.body.style.backgroundColor='#FFF';
+//         document.body.style.color='#000';
+//         button.style.backgroundColor ='#000'; 
+//         button.style.filter='drop-shadow(0px 0px 3px GREY)';
+//         title.innerHTML='Modo Claro';
+//         sun.style='display: none';
+//         moon.style='color: white; font-size: 25px;';
+//     }
     
-};
-button.addEventListener('click', switchMode);
+// };
+// button.addEventListener('click', switchMode);
+
+//-------------------------------------------------
 
 // scroll ----SALTEAR----
 // Crear un documento html con un body de 2000px de alto. Cuando se scrollea el body, cambiar el color de fondo cada 500px, por ejemplo:
@@ -305,7 +350,7 @@ button.addEventListener('click', switchMode);
 // 1001px - 1500px	blue
 // 1501px - 2000px	orange
 
-
+//-------------------------------------------------
 
 // imagenes
 // Crear un documento html con al menos 4 imágenes chicas (100px de alto) y una imagen grande (500px de alto). Cuando se clickean las imágenes chicas, la imagen grande se tiene que actualizar con la misma que la imagen chica clickeada.
