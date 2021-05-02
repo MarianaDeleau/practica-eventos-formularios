@@ -38,7 +38,7 @@
 
 
 //     //VERSION OK BELU        
-            
+
 //     const elementoContador = document.getElementById('contador')
 //     let contador = parseInt(elementoContador.innerHTML)    // DUDA
 //     const botonMenos1 = document.getElementById('boton-1')
@@ -218,6 +218,10 @@
 //     buttons[i].addEventListener('click', setColor)
 // }
 
+
+//-------------------------------------------------
+
+
 // email (sin leer)
 // Crear un documento html que tenga:
 
@@ -226,7 +230,18 @@
 // una lista desordenada con 10 ítems con lorem ipsum (4 o 5 palabras cada uno, no un párrafo entero)
 // Inicialmente los ítems deben estar en negrita y con color negro. Cuando se clickea uno de ellos, se debe sacarle la negrita y ponerle un color gris (simulando que el email fue leído)
 
+// const mail = document.getElementsByTagName('li');
+// const readed = (event) => {
+//     const items = event.target
+//     items.classList.add('readed');
+//     items.classList.remove('negrita');
+// }; 
+// for(let i = 0; i < mail.length; i++) {
+//     mail[i].addEventListener('click', readed)
+// }
 
+
+//-------------------------------------------------
 
 
 // progreso
@@ -239,6 +254,8 @@
 // lo mismo tiene que pasar cuando se apreta la flecha derecha (aumentar progreso) y la flecha izquierda (disminuir progreso)
 // el incremento/decremento es del 10%
 
+//-------------------------------------------------
+
 
 
 // modo-oscuro
@@ -247,7 +264,36 @@
 // modo oscuro: body con color de fondo negro, texto e ícono con color blanco, ícono de sol
 // modo claro: body con color de fondo blanco, texto e ícono con color negro, ícono de luna
 
+const button = document.getElementById('switch-button');
+const title = document.getElementsByClassName('title-mode')[0];
+const sun = document.getElementsByClassName('fa-sun')[0];
+const moon = document.getElementsByClassName('fa-moon')[0];
 
+const switchMode = (event) => {
+    document.body.classList.toggle('dark');
+    const mode = document.body.getAttribute('class');
+       
+    if(mode == 'dark') {
+
+        document.body.style='background-color: #000; color: #FFF';
+        button.style ='background-color: #FFF; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border:1px grey solid; filter: drop-shadow(0px 0px 3px ivory); ';
+        title.innerHTML='Modo Oscuro';
+        moon.style='display: none';
+        sun.style='color: black; font-size: 30px;';
+
+    } else { 
+
+        document.body.style='background-color: #FFF; color: #000';
+        button.style ='background-color: black; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border:1px grey solid; filter: drop-shadow(0px 0px 5px grey); ';
+        title.innerHTML='Modo Claro';
+        sun.style='display: none';
+        moon.style='color: white; font-size: 25px;';
+    }
+
+}
+
+
+button.addEventListener('click', switchMode);
 
 // scroll ----SALTEAR----
 // Crear un documento html con un body de 2000px de alto. Cuando se scrollea el body, cambiar el color de fondo cada 500px, por ejemplo:
@@ -345,7 +391,8 @@
 
 
 
-//opcion MARIANA
+//---------------opcion MARIANA
+
 // const calculo=(event)=>{
 //   let kilometros=document.getElementById('kilometros').value;
 //   let millas=document.getElementById('millas').value;
@@ -362,7 +409,7 @@
 // kilometros.addEventListener('change',calculo);
 // millas.addEventListener('change',calculo);
 
-// opcion ADRIAN
+// -------------opcion ADRIAN
 
 // let kilometros=document.getElementById('kilometros');
 // let millas=document.getElementById('millas');
@@ -391,7 +438,7 @@
 // Todos los inputs comiencen con el valor 255.
 // Cuando se modifica algún input, se cambie el color de fondo del body con el color que se forma a partir de dichos valores.
 
-// VERSION CON FUNCION
+// ------------------VERSION CON FUNCION
 
 // const redInput = document.getElementById('red');
 // let red = redInput.value;
@@ -429,7 +476,7 @@
 //     cambioColor(red, green, blue);
 // });
 
-// VERSION SIN FUNCION
+// -------------VERSION SIN FUNCION
 
 
 // const redInput = document.getElementById('red');
@@ -466,19 +513,18 @@
 //     blue=blueInput.value;
 //     let colorRgb=`rgb(${red}, ${green}, ${blue})`;
 //     fondo.style.backgroundColor=colorRgb;
-  
 // });
 
 
 
 
-//codigo RESET PAGINA CECI
+//---------------------------codigo RESET PAGINA CECI
 // function reloadPage(){
 //     window.location.reload();
 // }
 // reset.onclick= reloadPage; //Para resetear la página con el "onclick"
 
-
+//-----------------------------------------------------------------------
 
 // Todo
 // Crear una página que:
