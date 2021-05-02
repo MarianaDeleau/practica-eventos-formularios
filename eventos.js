@@ -275,24 +275,25 @@ const switchMode = () => {
     const mode = document.body.getAttribute('class');
        
     if(mode == 'dark') {
-
-        document.body.style='background-color: #000; color: #FFF';
-        button.style ='background-color: #FFF; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border:1px grey solid; filter: drop-shadow(0px 0px 3px ivory); ';
+        document.body.style.backgroundColor='#000';
+        document.body.style.color='#FFF';     
+        button.style.backgroundColor ='#FFF'; 
+        button.style.filter='drop-shadow(0px 0px 3px ivory)';
         title.innerHTML='Modo Oscuro';
         moon.style='display: none';
         sun.style='color: black; font-size: 30px;';
 
     } else { 
-
-        document.body.style='background-color: #FFF; color: #000';
-        button.style ='background-color: black; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border:1px grey solid; filter: drop-shadow(0px 0px 5px grey); ';
+        document.body.style.backgroundColor='#FFF';
+        document.body.style.color='#000';
+        button.style.backgroundColor ='#000'; 
+        button.style.filter='drop-shadow(0px 0px 3px GREY)';
         title.innerHTML='Modo Claro';
         sun.style='display: none';
         moon.style='color: white; font-size: 25px;';
     }
     
 };
-
 button.addEventListener('click', switchMode);
 
 // scroll ----SALTEAR----
