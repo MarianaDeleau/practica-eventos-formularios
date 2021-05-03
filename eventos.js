@@ -262,6 +262,7 @@ const buttons = document.getElementsByClassName('btn-counter');
 const progress = document.getElementById('progreso');
 let widthHijo = '0';
 divHijo.style.width= `${widthHijo}%`;
+//const slider = document.getElementById('slider');
 
 const progreso = (event) => {
 
@@ -300,6 +301,20 @@ const progresoFlechas = (event) => {
 }
 
 document.onkeyup = progresoFlechas
+
+//MUESTRA EL VALOR DEL INPUT SLIDER. 
+
+const slider = document.getElementById("slider");
+const output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value; 
+  widthHijo = output.innerHTML;
+  divHijo.style.width= `${widthHijo}%`;
+  progress.innerText=`${widthHijo}%`  
+}
+
 
 
 //-------------------------------------------------
