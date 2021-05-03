@@ -259,6 +259,7 @@
 const divPadre = document.getElementById('IdPadre');
 const divHijo = document.getElementById('IdHijo');
 const buttons = document.getElementsByClassName('btn-counter');
+const progress = document.getElementById('progreso');
 let widthHijo = '0';
 divHijo.style.width= `${widthHijo}%`;
 
@@ -270,9 +271,11 @@ const progreso = (event) => {
     if(op === '+'){
         widthHijo = parseInt(widthHijo)+10;
         divHijo.style.width= `${widthHijo}%`;
+        progress.innerText=`${widthHijo}%`
     } else if (op === '-') {
         widthHijo = parseInt(widthHijo)-10;
-        divHijo.style.width= `${widthHijo}%`;      
+        divHijo.style.width= `${widthHijo}%`;   
+        progress.innerText=`${widthHijo}%`   
     }
 }
 
@@ -287,9 +290,11 @@ const progresoFlechas = (event) => {
     if(event.keyCode == '39'){
         widthHijo = parseInt(widthHijo)+10;
         divHijo.style.width= `${widthHijo}%`;
+        progress.innerText=`${widthHijo}%`  
     } else if (event.keyCode == '37') {
         widthHijo = parseInt(widthHijo)-10;
         divHijo.style.width= `${widthHijo}%`;
+        progress.innerText=`${widthHijo}%`  
     }
 
 }
