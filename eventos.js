@@ -256,64 +256,64 @@
 
 
 
-const divPadre = document.getElementById('IdPadre');
-const divHijo = document.getElementById('IdHijo');
-const buttons = document.getElementsByClassName('btn-counter');
-const progress = document.getElementById('progreso');
-let widthHijo = '0';
-divHijo.style.width= `${widthHijo}%`;
-//const slider = document.getElementById('slider');
+// const divPadre = document.getElementById('IdPadre');
+// const divHijo = document.getElementById('IdHijo');
+// const buttons = document.getElementsByClassName('btn-counter');
+// const progress = document.getElementById('progreso');
+// let widthHijo = '0';
+// divHijo.style.width= `${widthHijo}%`;
 
-const progreso = (event) => {
 
-    const button = event.target
-    const op = button.getAttribute('data-op');
+// const progreso = (event) => {
 
-    if(op === '+'){
-        widthHijo = parseInt(widthHijo)+10;
-        divHijo.style.width= `${widthHijo}%`;
-        progress.innerText=`${widthHijo}%`
-    } else if (op === '-') {
-        widthHijo = parseInt(widthHijo)-10;
-        divHijo.style.width= `${widthHijo}%`;   
-        progress.innerText=`${widthHijo}%`   
-    }
-}
+//     const button = event.target
+//     const op = button.getAttribute('data-op');
 
-for(let i = 0; i < buttons.length; i++) {
+//     if(op === '+'){
+//         widthHijo = parseInt(widthHijo)+10;
+//         divHijo.style.width= `${widthHijo}%`;
+//         progress.innerText=`${widthHijo}%`
+//     } else if (op === '-') {
+//         widthHijo = parseInt(widthHijo)-10;
+//         divHijo.style.width= `${widthHijo}%`;   
+//         progress.innerText=`${widthHijo}%`   
+//     }
+// }
 
-    buttons[i].addEventListener('click', progreso)
+// for(let i = 0; i < buttons.length; i++) {
 
-}
+//     buttons[i].addEventListener('click', progreso)
 
-const progresoFlechas = (event) => {
+// }
 
-    if(event.keyCode == '39'){
-        widthHijo = parseInt(widthHijo)+10;
-        divHijo.style.width= `${widthHijo}%`;
-        progress.innerText=`${widthHijo}%`  
-    } else if (event.keyCode == '37') {
-        widthHijo = parseInt(widthHijo)-10;
-        divHijo.style.width= `${widthHijo}%`;
-        progress.innerText=`${widthHijo}%`  
-    }
+// const progresoFlechas = (event) => {
 
-}
+//     if(event.keyCode == '39'){
+//         widthHijo = parseInt(widthHijo)+10;
+//         divHijo.style.width= `${widthHijo}%`;
+//         progress.innerText=`${widthHijo}%`  
+//     } else if (event.keyCode == '37') {
+//         widthHijo = parseInt(widthHijo)-10;
+//         divHijo.style.width= `${widthHijo}%`;
+//         progress.innerText=`${widthHijo}%`  
+//     }
 
-document.onkeyup = progresoFlechas
+// }
 
-//MUESTRA EL VALOR DEL INPUT SLIDER. 
+// document.onkeyup = progresoFlechas
 
-const slider = document.getElementById("slider");
-const output = document.getElementById("demo");
-output.innerHTML = slider.value;
+// //MUESTRA EL VALOR DEL INPUT SLIDER. 
 
-slider.oninput = function() {
-  output.innerHTML = this.value; 
-  widthHijo = output.innerHTML;
-  divHijo.style.width= `${widthHijo}%`;
-  progress.innerText=`${widthHijo}%`  
-}
+// const slider = document.getElementById("slider");
+// const output = document.getElementById("demo");
+// output.innerHTML = slider.value;
+
+// slider.oninput = function() {
+//   output.innerHTML = this.value; 
+//   widthHijo = output.innerHTML;
+//   divHijo.style.width= `${widthHijo}%`;
+//   progress.innerText=`${widthHijo}%`  
+// }
 
 
 
@@ -376,11 +376,39 @@ slider.oninput = function() {
 // Crear un documento html con al menos 4 imágenes chicas (100px de alto) y una imagen grande (500px de alto). Cuando se clickean las imágenes chicas, la imagen grande se tiene que actualizar con la misma que la imagen chica clickeada.
 
 
+// const chica = document.getElementsByClassName('chica');
+// const grande = document.getElementsByClassName('grande')[0];
+// const cambio = (event) => {
+//         const fotoChica=event.target;
+//         const srcChica = fotoChica.getAttribute('src');
+//         grande.setAttribute('src' , srcChica)
+// }
+// for(let i = 0; i < chica.length; i++) {
+
+//  chica[i].addEventListener('click', cambio)
+// }
+
+
+//-------------------------------------------------
+
 
 // imagenes-2
 // Repetir el ejercicio anterior, pero en vez de cambiar la imagen grande cuando se clickean las imágenes chicas, hacerlo cuando se pasa el mouse por encima de las imágenes chicas.
 
 
+// const chica = document.getElementsByClassName('chica');
+// const grande = document.getElementsByClassName('grande')[0];
+// const cambio = (event) => {
+//         const fotoChica=event.target;
+//         const srcChica = fotoChica.getAttribute('src');
+//         grande.setAttribute('src' , srcChica)
+// }
+// for(let i = 0; i < chica.length; i++) {
+
+//  chica[i].addEventListener('mouseover', cambio)
+// }
+
+//-------------------------------------------------
 
 // peliculas
 // Crear un documento html con 12 imágenes de posters de películas. Buscar imágenes de películas de 3 géneros (acción, aventura, ciencia ficción, comedia, etc), 4 películas por género. Agregar al documento un botón por cada género, y un botón que diga Todas. Cuando se clickea el botón de un género, se tienen que mostrar sólo las películas correspondientes a ese género. Cuando se clickea el botón Todas se tienen que mostrar todas las películas.
